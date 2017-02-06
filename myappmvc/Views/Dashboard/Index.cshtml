@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page-wrapper">
+    @Html.Partial("_dashboardRow")
+    <!-- /.row -->
+    @Html.Partial("_tilesRow")
+    <!-- /.row -->
+    @Html.Partial("_bodyRow")
+    <!-- /.row -->
+</div>
+
+@section scripts
+{
+    <script src="~/scripts/jquery.signalR-2.2.1.js"></script>
+    <script src="~/signalr/js"></script>
+    <script src="~/scripts/myAppSignalR.js"></script>
+}
