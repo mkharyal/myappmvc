@@ -4,18 +4,17 @@
 
     $.connection.hub.start()
     .done(function () {
-        console.log('Connected!');
-        hubServer.hello();
+        console.log('Connected!');        
     })
     .fail(function (err) {
         console.log();
     });    
 
-    hubClient.hello = function () {
-        writeToDisplay();
+    hubClient.alert = function (err) {
+        writeToDisplay(err);
     }
 
     var writeToDisplay = function (message) {
-        console.log("hello");
+        console.log(message);
     };
 })();
